@@ -8,6 +8,8 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.LoadEnvironmentVariables();
+
         builder.Services.AddServices(builder.Configuration);
 
         var app = builder.Build();
