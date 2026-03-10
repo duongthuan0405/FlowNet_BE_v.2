@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.UseCases.Authentication.SignUp
+namespace Application.Services.Hashing
 {
-    public interface ISignUpUseCase : IUseCase<SignUpUCInput, SignUpUCOutput>
+    public enum StringType
     {
+        Base64String,
+        Base64URL,
+        UTF8
     }
 }

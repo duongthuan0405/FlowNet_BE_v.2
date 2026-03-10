@@ -8,6 +8,6 @@ namespace Application.UseCases
 {
     public interface IUseCase<TIn, TOut>
     {
-        TIn Execute(TIn input);
+        Task<TOut> ExecuteAsync(TIn input);
     }
 }

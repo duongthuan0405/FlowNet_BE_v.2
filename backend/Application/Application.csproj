@@ -7,9 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCases\Authentication\SignUp\Validators\**" />
+    <EmbeddedResource Remove="UseCases\Authentication\SignUp\Validators\**" />
+    <None Remove="UseCases\Authentication\SignUp\Validators\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <IncludeAssets>all</IncludeAssets>
     </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
   </ItemGroup>
 
 </Project>

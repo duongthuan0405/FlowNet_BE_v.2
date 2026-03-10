@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.UseCases.Authentication.SignUp
+namespace Application.Repositories
 {
-    public interface ISignUpUseCase : IUseCase<SignUpUCInput, SignUpUCOutput>
+    public interface IUserProfileRepository
     {
     }
 }
