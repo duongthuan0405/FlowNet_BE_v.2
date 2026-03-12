@@ -8,6 +8,6 @@ namespace Application.Services.Email
 {
     public interface IAuthenticatedEmailSender
     {
-        Task SendVerifyEmailOTP(string email, string oTP);
+        Task SendVerifyEmailOTP(string email, string otp);
     }
 }

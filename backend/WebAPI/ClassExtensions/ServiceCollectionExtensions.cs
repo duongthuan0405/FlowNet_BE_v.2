@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Application.UseCases.Authentication.SignUp;
+using Infrastructure.ClassExtensions;
+using Microsoft.OpenApi.Models;
 
 namespace WebAPI.ClassExtensions
 {
@@ -16,7 +18,25 @@ namespace WebAPI.ClassExtensions
             services.AddControllers();
 
             AddSwagger(services);
+            services.AddDI(configuration);
+            AddUseCases(services);
             return services;
+        }
+
+        private static void AddUseCases(IServiceCollection services)
+        {
+            AddAllUseCase(services);
+            AddUCInputValidators(services);
+        }
+
+        private static void AddUCInputValidators(IServiceCollection services)
+        {
+            services.AddSingleton<SignUpUCInputValidator>();
+        }
+
+        private static void AddAllUseCase(IServiceCollection services)
+        {
+            throw new NotImplementedException();
         }
 
         private static void AddSwagger(IServiceCollection services)

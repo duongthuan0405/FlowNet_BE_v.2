@@ -20,12 +20,5 @@ namespace Application.UseCases.Authentication.SignUp
         public Gender Gender { get; set; } = Gender.Other;
         public DateTimeOffset DateOfBirth { get; set; } = DateTimeOffset.UtcNow; 
 
-    }
-
-    public class SignUpUCOutput
-    {
-        public DateTimeOffset VerifyEmailOTPExpiredAt { get; set; } = DateTimeOffset.UtcNow;
-    }
-
-   
+    }   
 }

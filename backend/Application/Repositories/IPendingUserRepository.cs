@@ -9,8 +9,8 @@ namespace Application.Repositories
 {
     public interface IPendingUserRepository
     {
-        Task AddAsync(PendingUser? pendingUser);
+        Task<Guid> AddAsync(PendingUser? pendingUser);
         Task<PendingUser?> GetByUsernameOrEmailAsync(string username, string password);
-        Task UpdateAsync(PendingUser pendingUser);
+        Task<PendingUser> UpdateAsync(PendingUser pendingUser);
     }
 }

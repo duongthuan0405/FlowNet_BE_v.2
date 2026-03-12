@@ -9,5 +9,6 @@ namespace Application.Services.PasswordHashing
     public interface IPasswordHasher
     {
         string HashPassword(string username, string password);
+        public bool VerifyPassword(string username, string providedPassword, string hashedPassword);
     }
 }
